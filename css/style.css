@@ -1,0 +1,119 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;500;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4; /* Ubah latar belakang untuk kesan segar */
+}
+
+.banner {
+    height: 600px;
+    background-size: cover;
+    background-position: center;
+    position: relative; /* Menambahkan posisi relatif untuk animasi */
+}
+
+.banner-overlay {
+    background-color: rgba(0, 0, 0, 0.6); /* Sedikit lebih gelap untuk kontras yang lebih baik */
+    color: #fff;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    opacity: 0; /* Mulai dari transparan */
+    transform: translateY(20px); /* Posisi awal dari bawah */
+    animation: fadeInUp 1s forwards; /* Menambahkan animasi */
+}
+
+.banner-overlay h1 {
+    font-size: 3rem; /* Ukuran font yang lebih besar */
+    font-weight: 600; /* Berat font lebih tebal */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.banner-overlay p {
+    font-size: 1.5rem; /* Ukuran font yang lebih besar untuk deskripsi */
+    margin-top: 10px;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0; /* Transparan */
+        transform: translateY(20px); /* Mulai dari bawah */
+    }
+    to {
+        opacity: 1; /* Menjadi terlihat */
+        transform: translateY(0); /* Kembali ke posisi normal */
+    }
+}
+
+.btn-primary {
+    background-color: #28a745;
+    border-color: #28a745;
+    transition: transform 0.3s; /* Efek transisi untuk tombol */
+}
+
+.btn-primary:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+    transform: scale(1.1); /* Menambahkan efek zoom saat hover */
+}
+
+.card {
+    transition: transform 0.2s, box-shadow 0.2s; /* Menambahkan efek bayangan */
+    border: 2px solid #007bff; /* Garis di sekitar kotak */
+    border-radius: 10px; /* Sudut kotak yang melengkung */
+    background-color: white; /* Latar belakang kotak putih */
+    overflow: hidden; /* Menghindari elemen yang melampaui batas */
+    display: flex;
+    flex-direction: column; /* Memastikan semua elemen di dalam kartu sejajar */
+}
+
+.card-title {
+    font-family: 'Roboto', sans-serif; /* Menggunakan font yang berbeda untuk judul */
+    font-weight: 500; /* Berat font sedang */
+    border-bottom: 2px solid #007bff; /* Garis bawah pada judul */
+    padding: 10px 15px; /* Padding untuk jarak antara judul dan teks */
+}
+
+.card-text {
+    font-size: 1rem; /* Ukuran font standar untuk deskripsi */
+    padding: 15px; /* Padding di dalam teks */
+    flex-grow: 1; /* Membuat teks mengisi ruang tersisa */
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Efek bayangan saat hover */
+}
+
+footer {
+    background-color: #f8f9fa;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 20px 0; /* Menambahkan padding untuk footer */
+    font-size: 0.9rem; /* Ukuran font footer yang lebih kecil */
+    text-align: center; /* Mengatur teks footer menjadi tengah */
+}
+
+footer p {
+    margin: 0; /* Menghapus margin untuk footer */
+}
+
+footer a {
+    color: #007bff; /* Mengubah warna tautan */
+    transition: color 0.3s; /* Efek transisi untuk warna tautan */
+}
+
+footer a:hover {
+    color: #0056b3; /* Warna saat hover */
+}
+
+.copyright {
+    background-color: #007bff; /* Background untuk bagian copyright */
+    color: white; /* Warna teks copyright */
+    padding: 10px 0; /* Padding untuk ruang dalam */
+}
